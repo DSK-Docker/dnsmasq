@@ -1,0 +1,5 @@
+#! /bin/sh
+
+echo "${TIMEZONE}" > /etc/timezone
+
+dnsmasq --no-daemon
