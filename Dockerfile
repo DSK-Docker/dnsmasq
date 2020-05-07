@@ -5,17 +5,19 @@ LABEL maintainer="Dschinghis Kahn"
 ####################################################
 ######### DEFAULT VALUES                 ###########
 ####################################################
-#ENV TIMEZONE=UTC
-#ENV FG_LOG_LEVEL=info
-#ENV FG_PASSWORD=flexget
-#ENV TR_ALLOWED=127.0.0.1,192.168.0.*
-#ENV TR_USERNAME=transmission
-#ENV TR_PASSWORD=transmission
+ENV TIMEZONE=UTC
+
+####################################################
+######### INSTALLING BASE STUFF          ###########
+####################################################
+RUN \
+  apk add --no-cache tzdata
 
 ####################################################
 ######### INSTALLING DNSMASQ             ###########
 ####################################################
-RUN apk add --no-cache dnsmasq
+RUN \
+  apk add --no-cache dnsmasq
 
 ####################################################
 ######### SETUP FILES & FOLDERS          ###########

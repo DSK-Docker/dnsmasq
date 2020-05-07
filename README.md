@@ -5,6 +5,7 @@ Docker image for dnsmasq.
 ```Docker
 docker create \
   --name=dnsmasq \
+  -e TIMEZONE=<<TIMEZONE|default(UTC)>> \
   -p 53:53 \
   -p 53:53/udp \
   -p 67:67/udp \
