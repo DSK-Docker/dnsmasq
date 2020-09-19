@@ -3,4 +3,4 @@
 ln --force --no-dereference --symbolic /usr/share/zoneinfo/"${TIMEZONE}" /etc/localtime
 echo "${TIMEZONE}" > /etc/timezone
 
-dnsmasq --no-daemon --dhcp-broadcast
+dnsmasq --no-daemon ${ARGUMENTS}
