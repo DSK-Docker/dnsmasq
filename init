@@ -1,6 +1,6 @@
 #! /bin/sh
 
 ln --force --no-dereference --symbolic /usr/share/zoneinfo/"${TIMEZONE}" /etc/localtime
-eecho "${TIMEZONE}" > /etc/timezone
+echo "${TIMEZONE}" > /etc/timezone
 
 dnsmasq --no-daemon --dhcp-broadcast
