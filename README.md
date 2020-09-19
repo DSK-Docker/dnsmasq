@@ -6,10 +6,8 @@ Docker image for dnsmasq.
 docker create \
   --name=dnsmasq \
   -e TIMEZONE=<<TIMEZONE|default(UTC)>> \
-  -p 53:53 \
-  -p 53:53/udp \
-  -p 67:67/udp \
   -v path to dnsmasq.conf:/etc/dnsmasq.conf \
   --restart unless-stopped \
+  --net host
   dschinghiskahn/dnsmasq
 ```
