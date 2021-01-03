@@ -33,4 +33,6 @@ EXPOSE 53/TCP
 EXPOSE 51413/TCP
 EXPOSE 51413/UDP
 
+HEALTHCHECK CMD nc -z localhost 53 || exit 1
+
 CMD ["/init"]
